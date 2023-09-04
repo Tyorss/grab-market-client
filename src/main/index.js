@@ -21,16 +21,16 @@ function MainPage() {
 
   return (
     <div>
+      <div id="banner">
+        <img src="images/banners/banner1.png" alt="" />
+      </div>
       <div id="body">
-        <div id="banner">
-          <img src="images/banners/banner1.png" alt="" />
-        </div>
         <h1>판매되는 상품들</h1>
         <div id="product-list">
           {products.map(function (product, index) {
             return (
-              <div className="product-card">
-                <Link className="product-link" to={"/product   "}>
+              <div className="product-card" key={index}>
+                <Link className="product-link" to={`/product/${product.id}`}>
                   <div>
                     <img
                       className="product-img"
